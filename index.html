@@ -1,50 +1,269 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ramu Boddu | Developer </title>
-    <link rel="stylesheet" href="assets/style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ramu Boddu | Developer Portfolio</title>
+<style>
+  /* Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+  /* Reset & basics */
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #0a192f;
+    color: #ccd6f6;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  a {
+    color: #64ffda;
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+
+  /* Container */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Header / Hero */
+  header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 60px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #64ffda;
+  }
+  header h2 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #8892b0;
+    margin-top: 10px;
+    max-width: 540px;
+  }
+  .social-links {
+    margin-top: 40px;
+  }
+  .social-links a {
+    margin-right: 20px;
+    font-size: 1.8rem;
+  }
+
+  /* Sections */
+  section {
+    padding: 80px 0;
+    border-bottom: 1px solid #233554;
+  }
+  section:last-child {
+    border-bottom: none;
+  }
+  section h2 {
+    font-size: 2rem;
+    color: #64ffda;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #64ffda;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  /* About */
+  #about p {
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: #8892b0;
+  }
+
+  /* Skills */
+  #skills ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+  }
+  #skills ul li {
+    background-color: #112240;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin: 8px;
+    font-size: 1rem;
+    color: #64ffda;
+    box-shadow: 0 0 10px #64ffda22;
+    transition: transform 0.3s ease;
+  }
+  #skills ul li:hover {
+    transform: scale(1.05);
+  }
+
+  /* Projects */
+  #projects ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  #projects ul li {
+    background-color: #112240;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #64ffda33;
+    transition: box-shadow 0.3s ease;
+  }
+  #projects ul li:hover {
+    box-shadow: 0 0 20px #64ffdaaa;
+  }
+  #projects strong {
+    font-weight: 600;
+    color: #64ffda;
+    font-size: 1.1rem;
+  }
+  #projects a.btn-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #64ffda;
+    color: #0a192f;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px #64ffda88;
+    transition: background-color 0.3s ease;
+  }
+  #projects a.btn-link:hover {
+    background-color: #52e0b6;
+  }
+
+  /* Resume */
+  #resume a {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #64ffda;
+    color: #0a192f;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px #64ffdaaa;
+    transition: background-color 0.3s ease;
+  }
+  #resume a:hover {
+    background-color: #52e0b6;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+    color: #8892b0;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header h2 {
+      font-size: 1.2rem;
+    }
+    #skills ul {
+      justify-content: center;
+    }
+    #skills ul li {
+      margin: 5px;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+    }
+  }
+</style>
+<!-- Font Awesome for social icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Ramu Boddu</h1>
-        <p>Software Developer | PHP | CodeIgniter | API Integration</p>
-        <a href="mailto:ramubdu@gmail.com">ramubdu@gmail.com</a> |
-        <a href="https://www.linkedin.com/in/ramuboddu" target="_blank">LinkedIn</a>
-    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Results-driven Software Developer experienced in PHP, CodeIgniter, and third-party integrations. Passionate about building scalable, secure applications.</p>
-    </section>
+<header class="container">
+  <h1>Ramu Boddu</h1>
+  <h2>Software Developer specializing in PHP, CodeIgniter & API Integration</h2>
+  <nav class="social-links" aria-label="Social media links">
+    <a href="mailto:ramubdu@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/ramuboddu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+  </nav>
+</header>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>PHP (CodeIgniter 3 & 4, Laravel), JavaScript, HTML, CSS, Bootstrap</li>
-            <li>MySQL, RESTful APIs, Firebase, Payment/SMS Gateway Integration</li>
-            <li>Postman, Git, Bitbucket</li>
-        </ul>
-    </section>
+<main class="container" role="main">
+  <section id="about" tabindex="-1">
+    <h2>About Me</h2>
+    <p>
+      Results-driven Software Developer experienced in PHP, CodeIgniter, and third-party integrations. Passionate about building scalable, secure applications that deliver real business value.
+    </p>
+  </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Vakil Saab</strong> – Legal services prototype<br><a href="https://demo.colormoon.in/vakil_saab" target="_blank">Live Demo</a></li>
-            <li><strong>Masters Homeopathy</strong> – Clinic appointment & CMS<br><a href="https://mastershomeopathy.net/" target="_blank">Visit Website</a></li>
-            <li><strong>JSETMS</strong> – Online journal publication system<br><a href="https://jsetms.com/" target="_blank">Visit Website</a></li>
-        </ul>
-    </section>
+  <section id="skills" tabindex="-1">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>PHP (CodeIgniter 3 & 4, Laravel)</li>
+      <li>JavaScript, HTML5, CSS3, Bootstrap</li>
+      <li>MySQL, RESTful APIs, Firebase</li>
+      <li>Payment & SMS Gateway Integration</li>
+      <li>Postman, Git, Bitbucket</li>
+    </ul>
+  </section>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <p><a href="assets/ram.pdf" download>Download My Resume (PDF)</a></p>
-    </section>
+  <section id="projects" tabindex="-1">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <strong>Ramanarayanam</strong> – Spiritual/tourism app with temple tours, events, and donations<br />
+        <a href="https://play.google.com/store/apps/details?id=com.ramanarayanam" target="_blank" rel="noopener noreferrer" class="btn-link">View on Play Store</a>
+      </li>
+      <li>
+        <strong>VenueManager</strong> – Venue/hall booking platform with admin dashboard<br />
+        <a href="https://play.google.com/store/apps/details?id=com.venuemanager.app" target="_blank" rel="noopener noreferrer" class="btn-link">View on Play Store</a>
+      </li>
+      <li>
+        <strong>Vakil Saab</strong> – Legal services prototype<br />
+        <a href="https://demo.colormoon.in/vakil_saab" target="_blank" rel="noopener noreferrer" class="btn-link">Live Demo</a>
+      </li>
+      <li>
+        <strong>Masters Homeopathy</strong> – Clinic appointment & CMS<br />
+        <a href="https://mastershomeopathy.net/" target="_blank" rel="noopener noreferrer" class="btn-link">Visit Website</a>
+      </li>
+      <li>
+        <strong>JSETMS</strong> – Online journal publication system<br />
+        <a href="https://jsetms.com/" target="_blank" rel="noopener noreferrer" class="btn-link">Visit Website</a>
+      </li>
+    </ul>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Ramu Boddu. All rights reserved.</p>
-    </footer>
+  <section id="resume" tabindex="-1">
+    <h2>Resume</h2>
+    <a href="assets/ram.pdf" download>Download My Resume (PDF)</a>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Ramu Boddu. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
